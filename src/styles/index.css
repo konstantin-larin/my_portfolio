@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Roboto Bold';
+        font-display: swap;
+        src: url("../assets/fonts/Roboto/Roboto-Bold.ttf");
+    }
+    @font-face {
+        font-family: 'Roboto Regular';
+        font-display: swap;
+        src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
+    }
+    @font-face {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-display: swap;
+        src: url("../assets/fonts/Open_Sans/static/OpenSans-Regular.ttf");
+    }
+
+    body {
+        @apply
+        dark:bg-black dark:text-white
+        bg-white text-black min-w-[300px]
+        min-h-svh;
+    }
+
+    h1 {
+        @apply font-title text-2xl;
+    }
+
+    h2 {
+        @apply font-roboto;
+    }
+
+    main {
+        @apply w-full flex justify-between py-8
+    }
+
+    ::selection{
+        @apply text-lime
+    }
+}
+
+@layer components {
+    .icon,
+    .icon-button{
+        @apply w-6 2xl:w-8
+    }
+    .icon path,
+    .icon-button{
+        @apply transition-all
+    }
+    .icon:hover path{
+        @apply fill-orange dark:fill-pink;
+    }
+    .icon-button:hover{
+        @apply text-orange dark:text-pink;
+    }
+
+    .cross {
+        @apply w-8 md:w-10 xl:w-12
+    }
+
+    .icon path {
+        @apply fill-black dark:fill-white transition-all
+    }
+
+    .links {
+        @apply fixed right-0 px-3 flex flex-col gap-4 pt-2
+    }
+
+    .settings {
+        @apply px-3 flex flex-col gap-4 fixed bottom-8 right-0
+    }
+
+    .footer {
+        @apply text-center p-2  text-xs dark:text-gray text-dark
+    }
+
+    .roadmap {
+        @apply grow text-center relative
+    }
+
+    .blocks-container {
+        @apply gap-4 flex flex-wrap justify-center mt-4
+    }
+
+    .blocks-container-svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .blocks-container-svg path {
+        stroke-dasharray: 300; /* Длина пути */
+        stroke-dashoffset: 300; /* Начальное состояние (невидимая линия) */
+
+        @apply dark:stroke-white stroke-black
+    }
+
+    .blocks-container-svg .shown {
+        animation: draw 0.75s forwards; /* Анимация с продолжительностью 3 сек. */
+    }
+
+    .blocks-row {
+        @apply flex justify-around w-1/2 gap-4
+    }
+
+    .block-item {
+        @apply
+        transition-all
+        py-2 px-4 font-[600] flex relative items-center mt-4 justify-center
+        cursor-pointer select-none rounded-[4px] w-full
+        dark:bg-black bg-white
+    }
+
+    .block-item.learn {
+        @apply
+        hover:dark:text-purple hover:text-red
+        dark:before:bg-custom-gradient-dark before:bg-custom-gradient-light
+    }
+    .block-item.practice{
+        @apply
+        hover:dark:text-teel hover:text-light_blue
+        dark:before:bg-custom-gradient-dark-2 before:bg-custom-gradient-light-2
+    }
+    .block-item.learn::before,
+    .block-item.practice::before{
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        border: 3px solid transparent;
+        -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) padding-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        -webkit-mask-composite: source-out;
+        mask-composite: exclude;
+        background-size: 300% 300%;
+        -webkit-animation: animatedgradient 7s ease alternate infinite;
+        animation: animatedgradient 7s ease alternate infinite;
+    }
+
+    .asides {
+        @apply flex flex-col justify-between
+    }
+
+
+    .block-info {
+        @apply
+        fixed top-0 h-dvh dark:bg-black bg-white z-10 transition-all p-2
+        duration-300 md:duration-500 w-full sm:w-[360px] overflow-auto
+        sm:border-r-2 sm:border-r-black sm:dark:border-r-white
+    }
+
+    .block-info_hidden {
+        @apply -translate-x-full
+    }
+
+    .block-info h2 {
+        @apply mt-12 text-2xl font-bold tracking-wide
+    }
+    .block-info-inner{
+        @apply text-justify px-4 py-2
+    }
+    .block-info-inner p{
+        @apply mt-4
+    }
+    .block-info-inner h3{
+        @apply text-2xl not-italic mt-6
+    }
+    .block-info-inner a{
+        @apply italic transition-all text-lg;
+    }
+    .block-info.practice a {
+        @apply practice-link;
+    }
+    .block-info.learn a {
+        @apply learn-link;
+    }
+    .block-info-cross{
+        @apply absolute right-2
+    }
+    .block-info.learn .block-info-cross:hover path{
+        @apply dark:fill-purple fill-red;
+    }
+    .block-info.practice .block-info-cross:hover path{
+        @apply dark:fill-teel fill-light_blue;
+    }
+    .block-info-inner ul{
+        @apply mt-4 list-disc
+    }
+    .block-info-inner ul li ul{
+        @apply list-square
+    }
+    .block-info-inner ul li{
+        @apply mt-2 ml-2
+    }
+
+}
+
+@layer utilities {
+    .bg-custom-gradient-dark {
+        background: linear-gradient(45deg, #cc00ff, #7000ff, #cc00ff, #7000ff);
+    }
+    .bg-custom-gradient-dark-2{
+        background: linear-gradient(45deg, #86f1af, #04AA6D, #86f1af,  #04AA6D);
+    }
+
+    .bg-custom-gradient-light {
+        background: linear-gradient(45deg, #ffd500, #ff0000, #ffd500, #ff0000);
+    }
+
+    .bg-custom-gradient-light-2{
+        background: linear-gradient(45deg, #86d4f1, #0769df, #86d4f1,  #0769df);
+    }
+
+    *::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #9ca3af; /* Цвет бегунка */
+        border-radius: 10px; /* Скругление */
+    }
+
+    .practice-link{
+        @apply dark:hover:text-teel hover:text-light_blue;
+    }
+
+    .learn-link{
+        @apply dark:hover:text-purple hover:text-red;
+    }
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        /*opacity: 0;*/
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 200% 50%;
+    }
+    100% {
+        /*opacity: 1;*/
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0; /* Конечное состояние (линия полностью нарисована) */
+    }
+}
