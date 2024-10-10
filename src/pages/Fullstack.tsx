@@ -1,8 +1,8 @@
 import Roadmap from "../components/common/Roadmap.tsx";
-import {fullstackContent} from "../services/fullstack-content.ts";
 import Links from "../components/common/Links.tsx";
 import Settings from "../components/common/Settings.tsx";
 import {useContext} from "react";
+import {fullstackContent} from "../services/fullstack-content.ts"
 import {LanguageContext} from "../components/common/contexts/LanguageContext.tsx";
 import {BlockModel} from "../services/roadmap.ts";
 import {FullStackInfo} from "../services/FullStackInfo.ts";
@@ -11,7 +11,7 @@ export default function Fullstack() {
     const {language} = useContext(LanguageContext);
     const roadmap = [
         new BlockModel('HTML  & CSS', FullStackInfo.HTML, 'learn'),
-        new BlockModel("Статические страницы", FullStackInfo.STATIC_PAGES, 'practice'),
+        new BlockModel(fullstackContent.ST_P_NAME[language], FullStackInfo.STATIC_PAGES, 'practice'),
         new BlockModel("Язык JavaScript", FullStackInfo.JS_1, 'learn'),
         new BlockModel("Практические задачи", FullStackInfo.CODEWARS, 'practice'),
         new BlockModel('JavaScript DOM', FullStackInfo.JS_2, 'learn'),
@@ -32,7 +32,7 @@ export default function Fullstack() {
         new BlockModel('Шахматы на TypeScript', FullStackInfo.Chess, 'practice'),
     ];
     return <>
-        <Roadmap name={fullstackContent.title[language]} roadmap={roadmap}></Roadmap>
+        <Roadmap name={fullstackContent.TITLE[language]} roadmap={roadmap}></Roadmap>
         <Links></Links>
         <Settings></Settings>
     </>

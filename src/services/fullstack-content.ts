@@ -1,12 +1,16 @@
 export type Language = 'en'|'ru';
 export const fullstackContent = {
-    title: {
+    TITLE: {
        'ru': "Навыки & Проекты",
        'en': "Skills & Projects",
     },
-    footer: {
+    FOOTER: {
         "ru": "© Константин Ларин 2024",
         "en": "© Konstantin Larin 2024",
+    },
+    ST_P_NAME: {
+        ru: 'Статические страницы',
+        en: 'Static pages',
     },
     htmlDescription: {
         ru: ``,

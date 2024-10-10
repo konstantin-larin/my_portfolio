@@ -5,7 +5,7 @@ export default function Footer(){
     const {language} = useContext(LanguageContext);
     return (
         <footer className={'footer'}>
-            {fullstackContent.footer[language]}
+            {fullstackContent.FOOTER[language]}
         </footer>
     )
 }

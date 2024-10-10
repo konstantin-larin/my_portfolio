@@ -1,12 +1,14 @@
-import {useEffect, useLayoutEffect, useRef, useState} from "react";
+import {useContext, useEffect, useLayoutEffect, useRef, useState} from "react";
 import FullStackBlockInfo from "../FullStackBlockInfo.tsx";
 import {BlockModel} from "../../services/roadmap.ts";
 import {FullStackInfo} from "../../services/FullStackInfo.ts";
 import {Block} from "./Block.tsx";
 import {funcs} from "../../services/funcs.ts";
+import {LanguageContext} from "./contexts/LanguageContext.tsx";
 
 
 export default function Roadmap({name, roadmap}: { name: string, roadmap: BlockModel[] }) {
+    const {language} = useContext(LanguageContext)
     const blocksContainerRef = useRef<HTMLDivElement | null>(null);
     const blocksRef = useRef<(HTMLDivElement | null)[]>([]);
     const [block, setBlock] = useState<BlockModel>(
@@ -119,7 +121,7 @@ export default function Roadmap({name, roadmap}: { name: string, roadmap: BlockM
             }
         }
         setVectors(newVectors);
-    }, [windowSize]);
+    }, [windowSize, language]);
 
     const vectorsRef = useRef<(SVGPathElement | null)[]>([]);
     useEffect(() => {
