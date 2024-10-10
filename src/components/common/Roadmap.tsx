@@ -12,7 +12,7 @@ export default function Roadmap({name, roadmap}: { name: string, roadmap: BlockM
     const blocksContainerRef = useRef<HTMLDivElement | null>(null);
     const blocksRef = useRef<(HTMLDivElement | null)[]>([]);
     const [block, setBlock] = useState<BlockModel>(
-        new BlockModel('Инфо', FullStackInfo.DEFAULT, 'info')
+        new BlockModel({ru: '', en: ''}, FullStackInfo.DEFAULT, 'info')
     );
 
 
@@ -159,9 +159,7 @@ export default function Roadmap({name, roadmap}: { name: string, roadmap: BlockM
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        console.log(entry.target);
                         // Добавляем класс при появлении элемента
-                        // console.log(entry.target);
                         // queue.push(entry.target as HTMLElement);
                         entry.target.classList.add('shown');
                         observer.unobserve(entry.target);
@@ -240,7 +238,6 @@ export default function Roadmap({name, roadmap}: { name: string, roadmap: BlockM
                                     return (
                                         <Block
                                             ref={(el) => {
-
                                                 blocksRef.current[i * colsCount + j] = el;
                                             }}
 

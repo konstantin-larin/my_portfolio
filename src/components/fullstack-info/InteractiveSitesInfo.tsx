@@ -1,9 +1,14 @@
+import {LanguageContext} from "../common/contexts/LanguageContext.tsx";
+import {fullstackContent} from "../../services/fullstack-content.ts";
+import {useContext} from "react";
+
 export default function InteractiveSitesInfo() {
+    const {language} = useContext(LanguageContext);
+
     return (
         <div className={'block-info-inner'}>
             <ul>
-                Создавал эти сайты без использования библиотек и фреймворков - на чистом JavaScript и
-                CSS:
+                {fullstackContent.INT_S_1[language]}
                 <li>
                     <a href="https://konstantin-larin.github.io/vedexpress/" target={'_blank'}>
                         <h3>
@@ -11,42 +16,42 @@ export default function InteractiveSitesInfo() {
                         </h3>
                     </a>
                     <ul>
-                        Особенности:
+                        {fullstackContent.FEATURES[language]}:
                         <li>
-                            Использование grid
+                            {fullstackContent.INT_S_2[language]}
                         </li>
                         <li>
-                            Слайдер
+                            {fullstackContent.INT_S_3[language]}
                         </li>
                         <li>
-                            Переключение языков
+                            {fullstackContent.INT_S_4[language]}
                         </li>
                     </ul>
 
                     <a href="https://konstantin-larin.github.io/vedexpress/" target={'_blank'}>
-                        <p>Перейти на сайт</p>
+                        <p>{fullstackContent.FOLLOW_THE_LINK[language]}</p>
                     </a>
                 </li>
                 <li>
                     <a href="https://konstantin-larin.github.io/aperture/" target={'_blank'}>
                         <h3>
-                            Aperture
+                            Aperture{fullstackContent.INT_S_1[language]}
                         </h3>
                     </a>
                     <ul>
-                        Особенности:
+                        {fullstackContent.FEATURES[language]}:
                         <li>
-                            Параллакс
+                            {fullstackContent.INT_S_5[language]}
                         </li>
                         <li>
-                            Галлерея
+                            {fullstackContent.INT_S_6[language]}
                         </li>
                         <li>
-                            Бегущая строка брендов
+                            {fullstackContent.INT_S_7[language]}
                         </li>
                     </ul>
                     <a href="https://konstantin-larin.github.io/aperture/" target={'_blank'}>
-                        <p>Перейти на сайт</p>
+                        <p>{fullstackContent.FOLLOW_THE_LINK[language]}</p>
                     </a>
                 </li>
             </ul>

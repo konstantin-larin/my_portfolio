@@ -1,17 +1,20 @@
+import {LanguageContext} from "../common/contexts/LanguageContext.tsx";
+import {fullstackContent} from "../../services/fullstack-content.ts";
+import {useContext} from "react";
+
 export default function JSLangInfo(){
+    const {language} = useContext(LanguageContext);
     return (
         <div className={'block-info-inner'}>
             <p>
-                JavaScript стал моим первым языком программирования.
+                {fullstackContent.JS_LANG_1[language]}
             </p>
             <p>
-                Было интересно изучать возможности этого языка, постепенно росло знание
-                общих приниципов программирования.
+                {fullstackContent.JS_LANG_2[language]}
             </p>
             <p>
-                Ресурсов я просмотрел достаточно: сайты, 10-часовой видеоурок, но главным образом
-                за свое глубокое понимание этого языка я благодарен
-                <a href="https://learn.javascript.ru/" target={'_blank'}> LearnJavaScript.ru</a>
+                {fullstackContent.JS_LANG_3[language]}
+                <a href="https://learn.javascript.ru/" target={'_blank'}> LearnJavaScript</a>
             </p>
         </div>
     )

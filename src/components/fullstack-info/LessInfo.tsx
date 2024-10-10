@@ -1,12 +1,14 @@
+import {LanguageContext} from "../common/contexts/LanguageContext.tsx";
+import {fullstackContent} from "../../services/fullstack-content.ts";
+import {useContext} from "react";
 export default function LessInfo(){
+    const {language} = useContext(LanguageContext);
+
     return (
         <div className={'block-info-inner'}>
             <p>
-                Продолжая писать код на чистом CSS, стилизация одних и тех же элементов (header, navbar,
-                sidebar, footer, list element, popup) становилась все менее увлекательной, но все еще отнимала
-                время. Хотелось писать css короче и гибче. Поэтому я заинтересовался выбором препроцессора.
-                Глаз упал на Less (понравился синтаксис). Изучение препроцессора также происходило по
-                <a href="https://lesscss.org/" target={'_blank'}> документации</a> и по видеоурокам.
+                {fullstackContent.LESS_1[language]}
+                <a href="https://lesscss.org/" target={'_blank'}> {fullstackContent.DOCS[language]}</a> {fullstackContent.LESS_1[language]}.
             </p>
         </div>
     )

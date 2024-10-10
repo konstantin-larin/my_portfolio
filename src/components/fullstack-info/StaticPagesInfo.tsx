@@ -1,8 +1,12 @@
+import {LanguageContext} from "../common/contexts/LanguageContext.tsx";
+import {fullstackContent} from "../../services/fullstack-content.ts";
+import {useContext} from "react";
 export default function StaticPagesInfo() {
+    const {language} = useContext(LanguageContext);
     return (
         <div className={'block-info-inner'}>
-            <p>Достаточно практиковался верстке, прежде чем приступить к JavaScript.</p>
-            <p>Макеты брал из открытых источников и верстал по ним.</p>
+            <p>{fullstackContent.ST_P_1[language]}.</p>
+            <p>{fullstackContent.ST_P_2[language]}.</p>
 
             <ul>
                 <li>
@@ -14,7 +18,7 @@ export default function StaticPagesInfo() {
                     </a>
                     <a href="https://konstantin-larin.github.io/studyUSA/"
                         target={'_blank'}
-                    >Перети на сайт</a>
+                    >{fullstackContent.FOLLOW_THE_LINK[language]}</a>
                 </li>
 
                 <li>
@@ -28,7 +32,7 @@ export default function StaticPagesInfo() {
                     <a
                         href="https://konstantin-larin.github.io/avitoparser/"
                         target={'_blank'}
-                    >Перейти на сайт</a>
+                    >{fullstackContent.FOLLOW_THE_LINK[language]}</a>
                 </li>
             </ul>
         </div>

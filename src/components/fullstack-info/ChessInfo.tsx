@@ -1,15 +1,19 @@
+import {LanguageContext} from "../common/contexts/LanguageContext.tsx";
+import {fullstackContent} from "../../services/fullstack-content.ts";
+import {useContext} from "react";
+
 export default function ChessInfo(){
+    const {language} = useContext(LanguageContext);
     return (
         <div className={'block-info-inner'}>
             <a href="https://konstantin-larin.github.io/ts_learn/">
-                <p>Ознакомиться</p>
+                <p>{fullstackContent.SEE[language]}</p>
             </a>
 
             <p>
-                В целях изучения этого языка я принялся разрабатывать шахматы.
-                На основе <a href="https://youtu.be/mUvYGUYMvKo?si=Cll9mX5Y7-107gTm" target={'_blank'}>кода Ulbi </a>
-                была реализована шахматная доска, фигуры и их ходы, сам же я реализовал шах, мат, пат, рокировку, взятие на проходе и прочие нюансы игры.
-                Хотелось еще реализовать режим игры против компьютера, но при попытке это сделать (взаимодействовал с Lichess Api) понял, что лучше воспользоваться более гибкой и масштабной библиотекой chess.js.
+                {fullstackContent.CH_S_1[language]}
+                {fullstackContent.CH_S_2[language]}<a href="https://youtu.be/mUvYGUYMvKo?si=Cll9mX5Y7-107gTm" target={'_blank'}>{fullstackContent.CH_S_3[language]}</a>
+                {fullstackContent.CH_S_4[language]}
             </p>
         </div>
     )

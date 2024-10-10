@@ -1,4 +1,8 @@
+import {LanguageContext} from "../common/contexts/LanguageContext.tsx";
+import {fullstackContent} from "../../services/fullstack-content.ts";
+import {useContext} from "react";
 export default function SignalInfo() {
+    const {language} = useContext(LanguageContext);
     return (
         <div className={'block-info-inner'}>
             <a href="https://konstantin-larin.github.io/signal_company/" target={'_blank'}>
@@ -7,25 +11,24 @@ export default function SignalInfo() {
                 </h3>
             </a>
             <p>
-                Попробовал применить bootstap, но не полностью - пользовался лишь утилитами,
-                компоненты создавал сам на ванильном JavaScript.
+                {fullstackContent.BS_S_1[language]}
             </p>
             <ul>
-                Особенности сайта:
+                {fullstackContent.FEATURES[language]}:
                 <li>
-                    Встроенные фреймы (Rutube и Яндекс Карты)
+                    {fullstackContent.BS_S_2[language]}
                 </li>
                 <li>
-                    Анимированный слайдер с возможностью свайпа в мобильной версии
+                    {fullstackContent.BS_S_3[language]}
                 </li>
                 <li>
-                    Бегающий баннер в мобильной версии
+                    {fullstackContent.BS_S_4[language]}
                 </li>
             </ul>
 
             <a href="https://konstantin-larin.github.io/signal_company/" target={'_blank'}>
                 <p>
-                    Перейти на сайт
+                    {fullstackContent.FOLLOW_THE_LINK[language]}
                 </p>
             </a>
         </div>

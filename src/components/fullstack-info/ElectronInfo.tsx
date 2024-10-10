@@ -1,9 +1,14 @@
+import {LanguageContext} from "../common/contexts/LanguageContext.tsx";
+import {fullstackContent} from "../../services/fullstack-content.ts";
+import {useContext} from "react";
+
 export default function ElectronInfo(){
+    const {language} = useContext(LanguageContext);
+
     return (
         <div className={'block-info-inner'}>
             <p>
-                Какое-то время делал небольшие десктопные приложения на веб-технологиях.
-                Немного владею этим фреймворком. Изучал по видеоурокам и документации.
+                {fullstackContent.EL_1[language]}
             </p>
         </div>
     )
