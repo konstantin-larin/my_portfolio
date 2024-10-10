@@ -1,6 +1,6 @@
 import './styles/App.css';
 import {LanguageProvider} from "./components/common/contexts/LanguageContext.tsx";
-import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
+import {HashRouter as Router, Navigate, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import Fullstack from "./pages/Fullstack.tsx";
 import Layout from "./components/common/Layout.tsx";
