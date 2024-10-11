@@ -8,7 +8,7 @@ export default function LessInfo(){
         <div className={'block-info-inner'}>
             <p>
                 {fullstackContent.LESS_1[language]}
-                <a href="https://lesscss.org/" target={'_blank'}> {fullstackContent.DOCS[language]}</a> {fullstackContent.LESS_1[language]}.
+                <a href="https://lesscss.org/" target={'_blank'}> {fullstackContent.DOCS[language]}</a> {fullstackContent.LESS_2[language]}.
             </p>
         </div>
     )
