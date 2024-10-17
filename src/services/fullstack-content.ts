@@ -246,7 +246,7 @@ CSS:`,
     },
     ADV_JS_3: {
         ru: `Благодаря ему я разобрался с такими интересными темами как`,
-        en: `Thanks to him, I figured out such interesting topics as`
+        en: `Thanks to it, I figured out such interesting topics as`
     },
     ADV_JS_4: {
         ru: `Как хранить данные в браузере`,
