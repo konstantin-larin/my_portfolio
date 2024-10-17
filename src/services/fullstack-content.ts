@@ -69,7 +69,7 @@ export const fullstackContent = {
     },
     JS_LANG_2: {
         ru: ` Было интересно изучать возможности этого языка, постепенно росло знание
-                общих приниципов программирования.`,
+                общих принципов программирования.`,
         en: `It was interesting to study the possibilities of this language, and gradually the knowledge grew
                 general principles of programming.`,
     },
