@@ -228,6 +228,10 @@ CSS:`,
         ru: "Сайт на Less",
         en: 'Site built with Less',
     },
+    LESS_S_1: {
+        ru: 'Сверстал объемный макет с помощью Less. Мне понравилось использование этого препроцессора.',
+        en: 'I made up a large layout using Less. I liked using this preprocessor.',
+    },
     ADV_JS: {
         ru: 'Продвинутый JavaScript',
         en: 'Advanced JavaScript'

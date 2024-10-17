@@ -8,7 +8,7 @@ export default function SberknowledgeInfo(){
             <a href="https://konstantin-larin.github.io/sberknowledge/" target={'_blank'}>
                 <h3>Sberknowledge</h3>
             </a>
-            {/*<p>Как раз здесь я активно использовал</p>*/}
+            <p>{fullstackContent.LESS_S_1[language]}</p>
             <a href="https://konstantin-larin.github.io/sberknowledge/" target={'_blank'}>
                 <p>{fullstackContent.FOLLOW_THE_LINK[language]}</p>
             </a>
