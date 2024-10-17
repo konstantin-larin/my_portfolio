@@ -35,7 +35,7 @@ export default function InteractiveSitesInfo() {
                 <li>
                     <a href="https://konstantin-larin.github.io/aperture/" target={'_blank'}>
                         <h3>
-                            Aperture{fullstackContent.INT_S_1[language]}
+                            Aperture
                         </h3>
                     </a>
                     <ul>

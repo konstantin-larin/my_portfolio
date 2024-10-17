@@ -7,9 +7,9 @@ export default function GitInfo(){
 
     return (
         <div className={'block-info-inner'}>
-            <h3>
+            <p>
                 {fullstackContent.GIT_1[language]}
-            </h3>
+            </p>
         </div>
     )
 }
