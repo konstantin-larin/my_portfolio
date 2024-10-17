@@ -28,14 +28,19 @@ export default function InteractiveSitesInfo() {
                         </li>
                     </ul>
 
-                    <a href="https://konstantin-larin.github.io/vedexpress/" target={'_blank'}>
-                        <p>{fullstackContent.FOLLOW_THE_LINK[language]}</p>
-                    </a>
+                    <p>
+                        <a href="https://konstantin-larin.github.io/vedexpress/" target={'_blank'}>
+                            {fullstackContent.FOLLOW_THE_LINK[language]}
+                        </a>
+                        <br/>
+                        <a href="https://github.com/konstantin-larin/vedexpress/"
+                            target={'_blank'}>{fullstackContent.FOLLOW_THE_REPO[language]}</a>
+                    </p>
                 </li>
                 <li>
                     <a href="https://konstantin-larin.github.io/aperture/" target={'_blank'}>
                         <h3>
-                            Aperture
+                        Aperture
                         </h3>
                     </a>
                     <ul>
@@ -50,9 +55,15 @@ export default function InteractiveSitesInfo() {
                             {fullstackContent.INT_S_7[language]}
                         </li>
                     </ul>
-                    <a href="https://konstantin-larin.github.io/aperture/" target={'_blank'}>
-                        <p>{fullstackContent.FOLLOW_THE_LINK[language]}</p>
-                    </a>
+                    <p>
+                        <a href="https://konstantin-larin.github.io/aperture/" target={'_blank'}>
+                            {fullstackContent.FOLLOW_THE_LINK[language]}
+                        </a>
+                        <br/>
+                        <a href="https://github.com/konstantin-larin/aperture/"
+                            target={'_blank'}>{fullstackContent.FOLLOW_THE_REPO[language]}</a>
+                    </p>
+
                 </li>
             </ul>
         </div>

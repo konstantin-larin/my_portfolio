@@ -26,11 +26,15 @@ export default function SignalInfo() {
                 </li>
             </ul>
 
-            <a href="https://konstantin-larin.github.io/signal_company/" target={'_blank'}>
-                <p>
+            <p>
+                <a href="https://konstantin-larin.github.io/signal_company/" target={'_blank'}>
                     {fullstackContent.FOLLOW_THE_LINK[language]}
-                </p>
-            </a>
+                </a>
+                <br/>
+                <a href="https://github.com/konstantin-larin/signal_company"
+                    target={'_blank'}>{fullstackContent.FOLLOW_THE_REPO[language]}</a>
+            </p>
+
         </div>
     )
 }

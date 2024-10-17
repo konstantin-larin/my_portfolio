@@ -6,10 +6,10 @@ export default function TailwindInfo(){
 
     return (
         <div className={'block-info-inner'}>
-            <p>{fullstackContent.T_1[langauge]}</p>
-            <p>{fullstackContent.T_2[langauge]}
+            <p>{fullstackContent.T_1[language]}</p>
+            <p>{fullstackContent.T_2[language]}
                 <a href="https://tailwindcss.com/docs/installation" target={'_blank'}> {fullstackContent.DOCS[language]} </a>
-               {fullstackContent.T_3[langauge]}.
+               {fullstackContent.T_3[language]}.
             </p>
         </div>
     )

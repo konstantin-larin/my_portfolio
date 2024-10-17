@@ -18,7 +18,8 @@ export default function StaticPagesInfo() {
                     </a>
                     <a href="https://konstantin-larin.github.io/studyUSA/"
                         target={'_blank'}
-                    >{fullstackContent.FOLLOW_THE_LINK[language]}</a>
+                    >{fullstackContent.FOLLOW_THE_LINK[language]}</a> <br/>
+                    <a href="https://github.com/konstantin-larin/studyUSA" target={'_blank'}>{fullstackContent.FOLLOW_THE_REPO[language]}</a>
                 </li>
 
                 <li>
@@ -33,6 +34,9 @@ export default function StaticPagesInfo() {
                         href="https://konstantin-larin.github.io/avitoparser/"
                         target={'_blank'}
                     >{fullstackContent.FOLLOW_THE_LINK[language]}</a>
+                    <br/>
+                    <a href="https://github.com/konstantin-larin/avitoparser"
+                        target={'_blank'}>{fullstackContent.FOLLOW_THE_REPO[language]}</a>
                 </li>
             </ul>
         </div>

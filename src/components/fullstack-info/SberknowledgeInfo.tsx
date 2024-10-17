@@ -9,9 +9,14 @@ export default function SberknowledgeInfo(){
                 <h3>Sberknowledge</h3>
             </a>
             <p>{fullstackContent.LESS_S_1[language]}</p>
-            <a href="https://konstantin-larin.github.io/sberknowledge/" target={'_blank'}>
-                <p>{fullstackContent.FOLLOW_THE_LINK[language]}</p>
-            </a>
+            <p>
+                <a href="https://konstantin-larin.github.io/sberknowledge/" target={'_blank'}>
+                    {fullstackContent.FOLLOW_THE_LINK[language]}
+                </a>
+                <br/>
+                <a href="https://github.com/konstantin-larin/sberknowledge/"
+                    target={'_blank'}>{fullstackContent.FOLLOW_THE_REPO[language]}</a>
+            </p>
         </div>
     )
 }
