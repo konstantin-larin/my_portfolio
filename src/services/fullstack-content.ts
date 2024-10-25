@@ -381,6 +381,17 @@ CSS:`,
                 I also wanted to implement a game mode against the computer, but when I tried to do this (I interacted with the Lichess Api), I realized that it was better to use a more flexible and large-scale library chess.js .`,
     },
 
+    SQL: {
+        ru: 'SQL',
+        en: 'SQL',
+    },
+    SQL_1: {
+        ru: 'Изучил SQL, пройдя курс от',
+        en: 'I\'ve learned SQL by taking a course from'
+    },
+
+
+
     FOLLOW_THE_LINK: {
         ru: 'Перейти по ссылке',
         en: 'Follow the link',
@@ -400,5 +411,5 @@ CSS:`,
     DOCS: {
         ru: 'документации',
         en: 'documentation'
-    }
+    },
 }

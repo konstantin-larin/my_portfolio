@@ -21,6 +21,7 @@ import AboutMeInfo from "./fullstack-info/AboutMeInfo.tsx";
 import TypeScriptInfo from "./fullstack-info/TypeScriptInfo.tsx";
 import ChessInfo from "./fullstack-info/ChessInfo.tsx";
 import SignalInfo from "./fullstack-info/SignalInfo.tsx";
+import SQLInfo from "./fullstack-info/SQLInfo.tsx";
 
 
 export default function FullStackBlockInfo({block,hidden, setHidden}:
@@ -48,6 +49,7 @@ export default function FullStackBlockInfo({block,hidden, setHidden}:
             {info === FullStackInfo.LARJ && <AboutMeInfo/>}
             {info === FullStackInfo.TYPESCRIPT && <TypeScriptInfo/>}
             {info === FullStackInfo.Chess && <ChessInfo/>}
+            {info === FullStackInfo.SQL && <SQLInfo/>}
         </BlockInfo>
     )
 }

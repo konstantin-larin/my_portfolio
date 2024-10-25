@@ -1,7 +1,6 @@
 export enum FullStackInfo {
     DEFAULT,
     HTML,
-    CSS,
 
     STATIC_PAGES,
 
@@ -17,7 +16,6 @@ export enum FullStackInfo {
     SBERKNOWLEDGE,
 
     ADVANCED_JS,
-    NPM,
     AUTOONLINE,
 
     GIT,
@@ -25,21 +23,14 @@ export enum FullStackInfo {
     ELECTRON,
     CARD_LEARNING,
     REACT,
-    ReactLearning,
     TAILWIND,
     LARJ,
     TYPESCRIPT,
     Chess,
 
-    API,
+    SQL,
 
 
-    NODE,
-    Chess2,
-
-    EXPRESS,
-    MONGODB,
-    POSTGRESQL,
 
     // NEXTJS,
 }

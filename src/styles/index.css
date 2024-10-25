@@ -105,15 +105,15 @@
     }
 
     .blocks-row {
-        @apply flex justify-around w-1/2 gap-4
+        @apply flex justify-between gap-4 w-1/2
     }
 
     .block-item {
         @apply
         transition-all
         py-2 px-4 font-[600] flex relative items-center mt-4 justify-center
-        cursor-pointer select-none rounded-[4px] w-full
-        dark:bg-black bg-white
+        cursor-pointer select-none rounded-[4px] w-full max-w-[200px]
+        dark:bg-black bg-white min-h-[4rem]
     }
 
     .block-item.learn {
