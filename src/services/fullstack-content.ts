@@ -390,6 +390,15 @@ CSS:`,
         en: 'I\'ve learned SQL by taking a course from'
     },
 
+    NEXT: {
+        ru: "Next",
+        en: "Next",
+    },
+    NEXT_1: {
+        ru: "Продолжая осваивать React, перешел на Next. Изучаю этот фреймворк по документации и видео-урокам.",
+        en: "Continuing to master React, I switched to Next. I'm learning this framework from documentation and video tutorials",
+    },
+
 
 
     FOLLOW_THE_LINK: {

@@ -31,6 +31,7 @@ export default function Fullstack() {
         new BlockModel(fullstackContent.TS, FullStackInfo.TYPESCRIPT, 'learn'),
         new BlockModel(fullstackContent.CH_S, FullStackInfo.Chess, 'practice'),
         new BlockModel(fullstackContent.SQL, FullStackInfo.SQL, 'learn'),
+        new BlockModel(fullstackContent.NEXT, FullStackInfo.NEXT, 'learn'),
     ];
     return <>
         <Roadmap name={fullstackContent.TITLE[language]} roadmap={roadmap}></Roadmap>

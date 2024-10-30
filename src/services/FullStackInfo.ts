@@ -29,6 +29,7 @@ export enum FullStackInfo {
     Chess,
 
     SQL,
+    NEXT,
 
 
 
