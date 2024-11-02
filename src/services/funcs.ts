@@ -3,7 +3,7 @@ export const funcs = {
         if(screenWidth <= 480){
             return 1;
         }
-        if(screenWidth <= 768){
+        if(screenWidth <= 900){
             return 2;
         }
         if(screenWidth <= 1024){

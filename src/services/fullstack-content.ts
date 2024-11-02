@@ -386,13 +386,14 @@ CSS:`,
         en: 'SQL',
     },
     SQL_1: {
-        ru: 'Изучил SQL, пройдя курс от',
-        en: 'I\'ve learned SQL by taking a course from'
+        ru: 'Основательно начал изучать Backend. Понял концепцию реляционных БД, освоил SQL, пройдя курс от',
+        en: 'I started to study the Backend thoroughly. I understood the concept of relational databases, mastered SQL, after taking a course from'
     },
 
+
     NEXT: {
-        ru: "Next",
-        en: "Next",
+        ru: "Next.js",
+        en: "Next.js",
     },
     NEXT_1: {
         ru: "Продолжая осваивать React, перешел на Next. Изучаю этот фреймворк по документации и видео-урокам.",
