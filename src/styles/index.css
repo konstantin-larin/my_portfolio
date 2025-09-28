@@ -116,18 +116,18 @@
         dark:bg-black bg-white min-h-[4rem]
     }
 
-    .block-item.learn {
+    .block-item.practice {
         @apply
         hover:dark:text-purple hover:text-red
         dark:before:bg-custom-gradient-dark before:bg-custom-gradient-light
     }
-    .block-item.practice{
+    .block-item.learn{
         @apply
         hover:dark:text-teel hover:text-light_blue
         dark:before:bg-custom-gradient-dark-2 before:bg-custom-gradient-light-2
     }
-    .block-item.learn::before,
-    .block-item.practice::before{
+    .block-item.practice::before,
+    .block-item.learn::before{
         pointer-events: none;
         position: absolute;
         top: 0;
@@ -177,19 +177,19 @@
     .block-info-inner a{
         @apply italic transition-all text-lg;
     }
-    .block-info.practice a {
-        @apply practice-link;
-    }
     .block-info.learn a {
         @apply learn-link;
+    }
+    .block-info.practice a {
+        @apply practice-link;
     }
     .block-info-cross{
         @apply absolute right-2
     }
-    .block-info.learn .block-info-cross:hover path{
+    .block-info.practice .block-info-cross:hover path{
         @apply dark:fill-purple fill-red;
     }
-    .block-info.practice .block-info-cross:hover path{
+    .block-info.learn .block-info-cross:hover path{
         @apply dark:fill-teel fill-light_blue;
     }
     .block-info-inner ul{
@@ -234,11 +234,11 @@
         border-radius: 10px; /* Скругление */
     }
 
-    .practice-link{
+    .learn-link{
         @apply dark:hover:text-teel hover:text-light_blue;
     }
 
-    .learn-link{
+    .practice-link{
         @apply dark:hover:text-purple hover:text-red;
     }
 }
