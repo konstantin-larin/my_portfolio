@@ -15,6 +15,7 @@ function App() {
                     <Route element={<Layout/>}>
                         <Route path={'/'} element={<Home/>}></Route>
                         <Route path={'/fullstack'} element={<Fullstack></Fullstack>}/>
+
                     </Route>
                 </Routes>
             </Router>
